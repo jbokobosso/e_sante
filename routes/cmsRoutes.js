@@ -20,7 +20,8 @@ router.post('/', async (request, response) => {
         const newData = await CmsModel.create(request.body)
         return response.json(newData)
     } catch (e) {
-        console.log(e)
+        console.dir(e)
+        if(e.code && e.code === 11000) return response.status(400).json({ message: `Un CMS existe déjà avec le nom ou le numéro de téléphone fourni.`, details: "La clé duplicate_key vous dira quel champ est concerné", duplicate_key: e.keyValue })
         return response.status(500).json({message: "Erreur interne"})
     }
 })

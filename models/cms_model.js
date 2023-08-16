@@ -39,7 +39,10 @@ function validateRegisterBody(bodyObject) {
 
 function validateUpdateBody(bodyObject) {
     const bodySchema = Joi.object({
-        id: Joi.string().required()
+        label: Joi.string().required(),
+        address: Joi.string().required(),
+        city: Joi.string().required(),
+        phoneNumber: Joi.date()
     })
     const validationResult = bodySchema.validate(bodyObject)
     return validationResult;
