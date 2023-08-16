@@ -1,0 +1,5 @@
+{
+    "secret": "SECRET",
+    "port": "PORT",
+    "tokenExpiresIn": "TOKEN_EXPIRES_IN"
+}

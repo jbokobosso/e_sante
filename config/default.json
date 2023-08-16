@@ -1,0 +1,6 @@
+{
+    "appName" : "E-Santé",
+    "dbName": "e_sante",
+    "bcryptSalt" : 10,
+    "tokenExpiresIn": "86400s"
+}

@@ -1,0 +1,5 @@
+{
+    "secret": "123456",
+    "port": "8081",
+    "mongodb_host": "mongodb://0.0.0.0:27017"
+}
